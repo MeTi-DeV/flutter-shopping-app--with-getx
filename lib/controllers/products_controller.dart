@@ -5,14 +5,15 @@ import 'package:untitled/models/product.dart';
 class ProductsController extends GetxController {
   static ProductsController instance = Get.find();
   RxList<ProductModel> products = RxList<ProductModel>([]);
-  String collections = "products";
+  String collection = "products";
   @override
-  void onReady() {
-    products.bindStream(getAllproducts());
+  onReady() {
     super.onReady();
+    products.bindStream(getAllProducts());
   }
 
-  Stream<List<ProductModel>> getAllproducts() =>
-      firebaseFirestore.collection(collections).snapshots().map((query) =>
+  Stream<List<ProductModel>> getAllProducts() =>
+      firebaseFirestore.collection(collection).snapshots().map((query) =>
           query.docs.map((item) => ProductModel.fromMap(item.data())).toList());
+
 }
