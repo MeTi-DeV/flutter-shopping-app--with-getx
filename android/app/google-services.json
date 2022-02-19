@@ -1,0 +1,39 @@
+{
+    "project_info": {
+      "project_number": "596887566788",
+      "project_id": "getxshop-549fe",
+      "storage_bucket": "getxshop-549fe.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:596887566788:android:899dc5a53ddcd5bdd60c91",
+          "android_client_info": {
+            "package_name": "com.santosenoque.untitled"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "596887566788-cog3hcev8umu87of5u22qjfne92181uf.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyAqNQFVJADw5YcYwAEbAXJ8zNmrK9Nb0LY"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "596887566788-cog3hcev8umu87of5u22qjfne92181uf.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
