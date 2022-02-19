@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/constants/controllers.dart';
 import 'package:untitled/models/cart_item.dart';
 import 'package:untitled/widgets/custom_text.dart';
 
@@ -15,7 +16,7 @@ class CartItemWidget extends StatelessWidget {
         Padding(
           padding:
           const EdgeInsets.all(8.0),
-          child: Image.asset(
+          child: Image.network(
             cartItem.image,
             width: 80,
           ),
@@ -36,19 +37,23 @@ class CartItemWidget extends StatelessWidget {
                     IconButton(
                         icon: Icon(
                             Icons.chevron_left),
-                        onPressed: () {}),
+                        onPressed: () {
+                          cartController.decreaseQuantity(cartItem);
+                        }),
                     Padding(
                       padding:
                       const EdgeInsets.all(
                           8.0),
                       child: CustomText(
-                        text: cartItem.quantity,
+                        text: cartItem.quantity.toString(),
                       ),
                     ),
                     IconButton(
                         icon: Icon(Icons
                             .chevron_right),
-                        onPressed: () {}),
+                        onPressed: () {
+                          cartController.increaseQuantity(cartItem);
+                        }),
                   ],
                 )
               ],
